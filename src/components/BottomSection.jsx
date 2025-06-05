@@ -1,6 +1,6 @@
 /* global chrome */
 
-const BottomSection = ({ pages, setPages, websites, setWebsites, refresh, setRefresh, toggleAds, enabled, setEnabled }) => {
+const BottomSection = ({ pages, setPages, websites, setWebsites, refresh, setRefresh, toggleAds, setEnabled }) => {
     const handlePagesToggle = () => {
         const newValue = !pages.enabled;
         const newPages = pages.enabled ?

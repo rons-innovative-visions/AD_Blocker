@@ -6,7 +6,7 @@ function App() {
   const [enabled, setEnabled] = useState(true)
 
   const [refresh, setRefresh] = useState(false)
-  const [theme, setTheme] = useState(false)
+  const [theme, setTheme] = useState(true)
 
   const [pages, setPages] = useState({ enabled: true, current: null, saved: [] });
   const [websites, setWebsites] = useState({ enabled: true, current: null, saved: [] });
@@ -60,8 +60,8 @@ function App() {
         <img className={`w-7 h-7 absolute right-4 top-2 cursor-pointer hover:scale-105 transition-all duration-400 ${refresh ? "translate-x-0}" : "translate-x-20"}`} src="/reload.svg" alt="brush" onClick={() => toggleRefresh()} />
       </div>
       <div className="w-full grid items-center justify-center h-10/12">
-        <div className={`w-40 h-40 rounded-full flex items-center justify-center cursor-pointer ${enabled ? "bg-[#60B5FF]" : ""}`}>
-          <ToggleSection {...{ enabled, setEnabled, toggleAds, refresh, setRefresh, pages, setPages, websites, setWebsites }} />
+        <div className={`w-40 h-40 rounded-full flex items-center transition-all duration-500 justify-center cursor-pointer ${enabled ? "bg-[#60B5FF]" : ""}`}>
+          <ToggleSection {...{ enabled, setEnabled, toggleAds, refresh, setRefresh, pages, setPages, websites, setWebsites, theme }} />
         </div>
         <BottomSection {...{ pages, setPages, websites, setWebsites, refresh, setRefresh, toggleAds, enabled, setEnabled }} />
       </div>
