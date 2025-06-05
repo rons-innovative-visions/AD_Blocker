@@ -7,7 +7,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
     chrome.storage.local.set({
         adBlockEnabled: true,
-        theme: true,
+        theme: false,
         pages: [],
         websites: [],
     })
